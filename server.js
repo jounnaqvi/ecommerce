@@ -9,10 +9,11 @@ import categoryroute from "./routes/Categoryroutes.js";
 import productroutes from "./routes/ProductRoutes.js";
 import bodyParser from "body-parser";
 import path from "path";
-
+import {fileURLtoPath} from 'url';
 // Load environment variables
 dotenv.config();
-
+const __filename = fileURLtoPath(import.meta.URL);
+const__dirname = path.dirname(__filename)
 // Initialize Express app
 const app = express();
 
