@@ -11,8 +11,7 @@ import bodyParser from "body-parser";
 
 // Load environment variables
 dotenv.config();
-const __filename = fileURLtoPath(import.meta.URL);
-const__dirname = path.dirname(__filename)
+
 // Initialize Express app
 const app = express();
 
