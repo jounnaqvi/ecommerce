@@ -8,8 +8,7 @@ import cors from "cors";
 import categoryroute from "./routes/Categoryroutes.js";
 import productroutes from "./routes/ProductRoutes.js";
 import bodyParser from "body-parser";
-import path from "path";
-import {fileURLtoPath} from 'url';
+
 // Load environment variables
 dotenv.config();
 const __filename = fileURLtoPath(import.meta.URL);
@@ -30,7 +29,7 @@ connectDB();
 app.use('/api/auth', authRoutes); 
 app.use('/api/categories', categoryroute); 
 app.use('/api/product', productroutes); 
-app.use(express.static(path.join(__dirname,"./client/build")))
+
 // Default route
 app.get("/", (req, res) => {
   res.send("Welcome to my ecommerce website at MERN app 2024");
